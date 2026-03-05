@@ -1,53 +1,52 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { CheckCircle, X } from 'lucide-react';
+import { useState } from 'react';
+import { CheckCircle } from 'lucide-react';
 
-interface LeadFormModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+interface HeroLeadFormProps {
+  city?: string;
+  service?: string;
 }
 
-const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbwIkSKA8qGfLjJ3e_lUUJp5U0oNZLo51wpZtXvdvNSaPXNyynWrdtN-ZcoYql3hcAjy/exec';
+const GATE_TYPES = [
+  'Electric Sliding Gates',
+  'Electric Swing Gates',
+  'Wooden Driveway Gates',
+  'Metal Driveway Gates',
+  'Automated Gate Systems',
+  'Gate Repair and Maintenance',
+];
 
-export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
+const GOOGLE_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbyx9vLUlFI9ANUU10eTA1Uwu7dL5rVd5ZYZzDb1QgmEc7u3l668RFac9J_we3lC88Me/exec';
+
+export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [shouldRender, setShouldRender] = useState(isOpen);
-  const [animationState, setAnimationState] = useState<'idle' | 'entering' | 'exiting'>('idle');
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    location: city || '',
+    treatment: service || '',
+  });
 
-  useEffect(() => {
-    if (isOpen) {
-      setShouldRender(true);
-      setAnimationState('entering');
-    } else if (shouldRender) {
-      setAnimationState('exiting');
-      const timer = setTimeout(() => {
-        setShouldRender(false);
-        setAnimationState('idle');
-      }, 300);
-      return () => clearTimeout(timer);
-    }
-  }, [isOpen, shouldRender]);
-
-  if (!shouldRender) return null;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     try {
-      const form = e.currentTarget;
-      const fullName = (form.elements[0] as HTMLInputElement).value;
-      const email = (form.elements[1] as HTMLInputElement).value;
-      const location = (form.elements[2] as HTMLInputElement).value;
-
       const payload = {
-        fullName,
-        email,
-        location,
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        location: formData.location || city || '',
+        treatment: formData.treatment || service || '',
         page: window.location.href,
-        source: 'Driveway Gates London',
+        source: 'Driveway Gates Essex',
       };
 
       const res = await fetch(GOOGLE_SCRIPT_URL, {
@@ -56,14 +55,13 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
       });
 
       const text = await res.text();
-      let data: any = {};
+      let data: { ok?: boolean; error?: string } = {};
       try { data = JSON.parse(text); } catch {}
 
       if (data && data.ok === false) throw new Error(data.error || 'Submission failed');
 
       setIsSubmitting(false);
       setIsSuccess(true);
-      setTimeout(() => { setIsSuccess(false); onClose(); }, 3000);
     } catch (err) {
       console.error(err);
       setIsSubmitting(false);
@@ -71,71 +69,73 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
     }
   };
 
-  const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) onClose();
-  };
-
   const inputClass =
     "w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition";
 
+  if (isSuccess) {
+    return (
+      <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-100 flex flex-col items-center justify-center text-center gap-4 min-h-[340px]">
+        <div className="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center">
+          <CheckCircle className="w-10 h-10" />
+        </div>
+        <h3 className="text-2xl font-display font-bold">Request Received!</h3>
+        <p className="text-gray-600">
+          We&apos;ve matched you with a vetted installer{city ? ` in ${city}` : ''}. Check your email for next steps.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <div
-      className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm
-        ${animationState === 'entering' ? 'animate-backdrop-in' : animationState === 'exiting' ? 'animate-backdrop-out' : 'opacity-100'}`}
-      onClick={handleBackdropClick}
-    >
-      <div
-        className={`relative w-full max-w-lg overflow-hidden bg-white rounded-2xl shadow-2xl
-          ${animationState === 'entering' ? 'animate-modal-in' : 'animate-modal-out'}`}
-      >
+    <div className="bg-white text-gray-900 rounded-2xl p-6 md:p-8 shadow-2xl border border-gray-100">
+      <div className="mb-6">
+        <span className="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+          Free Matching Service
+        </span>
+        <h3 className="text-2xl font-display font-bold leading-tight">
+          Get Matched{city ? ` in ${city}` : ''}
+        </h3>
+        <p className="text-gray-600 text-sm mt-1">
+          Up to 3 vetted installers will contact you within 24 hours
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <input required name="fullName" type="text" value={formData.fullName} onChange={handleChange} placeholder="Full Name *" className={inputClass} />
+
+        <div className="grid grid-cols-2 gap-3">
+          <input required name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number *" className={inputClass} />
+          <input required name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Email Address *" className={inputClass} />
+        </div>
+
+        <select required name="treatment" value={formData.treatment} onChange={handleChange} className={inputClass + " appearance-none cursor-pointer"}>
+          <option value="" disabled>What type of gate? *</option>
+          {GATE_TYPES.map(t => (
+            <option key={t} value={t}>{t}</option>
+          ))}
+        </select>
+
+        {!city && (
+          <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Your Essex town or postcode *" className={inputClass} />
+        )}
+
         <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-all z-10"
-          aria-label="Close modal"
+          disabled={isSubmitting}
+          type="submit"
+          className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 text-white font-semibold py-3 px-6 rounded-xl transition-colors text-sm mt-1"
         >
-          <X className="w-5 h-5" />
+          {isSubmitting ? 'Sending...' : 'Get 3 Free Quotes'}
         </button>
 
-        <div className="p-8">
-          {isSuccess ? (
-            <div className="flex flex-col items-center text-center py-8 space-y-4">
-              <div className="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center">
-                <CheckCircle className="w-10 h-10" />
-              </div>
-              <h2 className="text-2xl font-display font-bold text-gray-900">Request Received!</h2>
-              <p className="text-gray-600">We&apos;ve matched you with a vetted installer. Check your email for next steps.</p>
-            </div>
-          ) : (
-            <>
-              <div className="mb-6">
-                <span className="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
-                  Free Matching Service
-                </span>
-                <h2 className="text-2xl font-display font-bold text-gray-900">Find Your Gate Installer</h2>
-                <p className="text-gray-600 text-sm mt-1">Complete the form to get matched with vetted London gate installers.</p>
-              </div>
-
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                <input required type="text" placeholder="Full name" className={inputClass} />
-                <input required type="email" placeholder="Email address" className={inputClass} />
-                <input required type="text" placeholder="Your London area or postcode" className={inputClass} />
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 text-white font-semibold py-3 px-6 rounded-xl transition-colors text-sm mt-1"
-                >
-                  {isSubmitting ? 'Sending...' : 'Check Availability'}
-                </button>
-
-                <p className="text-center text-xs text-gray-400 mt-1">
-                  Free service. No obligation. No spam.
-                </p>
-              </form>
-            </>
-          )}
+        <div className="flex items-center justify-center gap-4 pt-1">
+          {['100% Free', 'No Spam', '24hr Response'].map(item => (
+            <span key={item} className="flex items-center gap-1 text-xs text-green-600 font-medium">
+              <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
+              {item}
+            </span>
+          ))}
         </div>
-      </div>
+      </form>
     </div>
   );
 }
