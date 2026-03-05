@@ -58,14 +58,14 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
               <section className="mb-12">
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
-                  Trusted Driveway Gate Installers in {cityName}
+                  Driveway Gate Installers in {cityName}
                 </h2>
                 <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
                   <p>
-                    If you are looking for driveway gates in {cityName}, you have come to the right place. We work exclusively with experienced installers who have completed at least 50 residential gate projects, carry full public liability insurance, and offer written warranties on every job. That level of experience means better engineering, cleaner finishes, and gates that work reliably for years.
+                    Finding the right gate installer in {cityName} takes more than a quick search. The residential gate market in Essex includes both dedicated specialists and general builders who take gate work occasionally. The difference in outcome is significant: a specialist brings experience with ground conditions, motor specification, planning compliance, and post engineering that a generalist simply does not have. Every installer we refer in {cityName} has completed a minimum of 50 residential gate installations and carries full public liability insurance as standard.
                   </p>
                   <p>
-                    Our {cityName} installers offer free site surveys as standard. They will visit your property, measure up, discuss material and design options, assess ground conditions and any gradient issues, and provide a detailed written quote with no hidden costs. There is no obligation to proceed at any stage.
+                    The process starts with a free site survey. Your installer visits the property, measures the opening, checks the available swing or slide clearance, assesses ground and foundation conditions, and discusses the material and design options that suit the property and budget. You receive a detailed written quote covering all elements of the installation with no hidden additions. There is no fee for the survey and no obligation to proceed.
                   </p>
                 </div>
               </section>
@@ -95,10 +95,10 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">Why {cityName} Homeowners Use Our Service</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
-                    { icon: <Star className="w-5 h-5" />, title: 'Consistently High Ratings', desc: `Every ${cityName} installer in our network maintains excellent customer reviews. We monitor feedback continuously and remove any installer that falls below our standards.` },
-                    { icon: <Shield className="w-5 h-5" />, title: 'Only Proven Specialists', desc: `We do not list general builders or handymen. Every ${cityName} installer has completed 50 or more residential gate projects and specialises in driveway gate installation.` },
-                    { icon: <Clock className="w-5 h-5" />, title: 'Fast Survey Bookings', desc: `Most ${cityName} installers in our network can arrange a free site survey within 7 days. Many offer flexible scheduling including evenings and weekends.` },
-                    { icon: <CheckCircle className="w-5 h-5" />, title: 'Free Site Survey and Quote', desc: `Every consultation with a ${cityName} installer includes a full site survey, design discussion, and detailed written quote at no cost and with no obligation.` },
+                    { icon: <Star className="w-5 h-5" />, title: 'Specialists, Not Generalists', desc: `Every installer we refer in ${cityName} focuses on residential gate work. No general builders, no occasional gate fitters. Gate installation is what they do every day, and the quality of their work reflects that.` },
+                    { icon: <Shield className="w-5 h-5" />, title: 'Insured and Under Warranty', desc: `Public liability cover is mandatory for every installer in our ${cityName} network. Written warranties on the gate structure and the automation system are provided separately on every job, not as a combined catch-all.` },
+                    { icon: <Clock className="w-5 h-5" />, title: 'Survey Booked Within the Week', desc: `Most installers covering ${cityName} can offer a free site survey slot within 7 days. Evening and Saturday appointments are available for homeowners who cannot take time off during the week.` },
+                    { icon: <CheckCircle className="w-5 h-5" />, title: 'No Cost, No Obligation', desc: `The matching service is free at every stage. The site survey is free. The written quote is free. You choose whether and when to proceed with no pressure from us or the installer at any point.` },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-100">
                       <div className="bg-brand-100 p-2 rounded-lg text-brand-600 flex-shrink-0 h-fit">{item.icon}</div>
@@ -149,10 +149,10 @@ export default function CityPage({ params }: { params: { city: string } }) {
             </aside>
           </div>
 
-          <div className="bg-brand-50 rounded-2xl p-8 md:p-12 text-center mt-12">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-brand-900 mb-4">Ready to Get Driveway Gates in {cityName}?</h2>
-            <p className="text-brand-700 mb-8 max-w-2xl mx-auto">Fill in our 60-second form and let {cityName}&apos;s top gate installers come to you. Free surveys, free quotes, zero obligation.</p>
-            <button onClick={() => setIsModalOpen(true)} className="btn-primary text-lg !px-8 !py-4">Get Your Free Quotes</button>
+          <div className="bg-brand-900 rounded-2xl p-8 md:p-12 text-center mt-12">
+            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">Get Matched With Gate Installers in {cityName}</h2>
+            <p className="text-brand-200 mb-8 max-w-2xl mx-auto">Submit your enquiry in under two minutes. We will identify up to three vetted installers covering {cityName} and connect you directly. Free site surveys, written quotes, no obligation at any stage.</p>
+            <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">Get Your Free Quotes</button>
           </div>
         </div>
       </main>
