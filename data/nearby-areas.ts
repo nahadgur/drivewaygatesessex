@@ -130,3 +130,8 @@ export const nearbyAreas: Record<string, string[]> = {
     'Stondon Massey', 'Doddinghurst', 'Kelvedon Hatch', 'Pilgrims Hatch', 'Herongate',
   ],
 };
+
+export function getNearbyAreas(cityName: string): string[] {
+  if (nearbyAreas[cityName]) return nearbyAreas[cityName];
+  return [];
+}
