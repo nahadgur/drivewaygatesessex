@@ -24,15 +24,15 @@ const homepageFaqs = [
   },
   {
     question: 'Do I need planning permission for driveway gates in Essex?',
-    answer: 'Most residential driveway gates in Essex do not require planning permission. Under permitted development, gates up to 2 metres tall that open inward onto your property are generally exempt. The threshold drops to 1 metre if your gate fronts a classified road or public highway. Properties that are listed, within a conservation area, or subject to an Article 4 direction face tighter restrictions. Several Essex districts — including Epping Forest, Chelmsford, and Colchester — have specific design guidance in sensitive areas. Every installer we work with knows the local rules and will advise you during the site survey.',
+    answer: 'Most residential driveway gates in Essex do not require planning permission. Under permitted development, gates up to 2 metres tall that open inward onto your property are generally exempt. The threshold drops to 1 metre if your gate fronts a classified road or public highway. Properties that are listed, within a conservation area, or subject to an Article 4 direction face tighter restrictions. Several Essex districts, including Epping Forest, Chelmsford, and Colchester, have specific design guidance in sensitive areas. Every installer we work with knows the local rules and will advise you during the site survey.',
   },
   {
     question: 'How long does a driveway gate installation take in Essex?',
-    answer: 'A standard residential installation takes between 2 and 4 working days from start to finish. Day one is groundwork: post holes, concrete foundations, and electrical conduit. Day two covers gate hanging, motor installation, and initial wiring. The final day handles commissioning, intercom setup, remote programming, and safety testing. Bespoke fabricated gates — particularly wrought iron or hardwood designs made to measure — typically require 3 to 6 weeks of lead time in the workshop before the installation date. Your installer will give you a precise programme at the site survey stage.',
+    answer: 'A standard residential installation takes between 2 and 4 working days from start to finish. Day one is groundwork: post holes, concrete foundations, and electrical conduit. Day two covers gate hanging, motor installation, and initial wiring. The final day handles commissioning, intercom setup, remote programming, and safety testing. Bespoke fabricated gates, particularly wrought iron or hardwood designs made to measure, typically require 3 to 6 weeks of lead time in the workshop before the installation date. Your installer will give you a precise programme at the site survey stage.',
   },
   {
     question: 'Which type of driveway gate works best for Essex properties?',
-    answer: 'The right gate depends on your driveway geometry, property style, and security priorities. Electric sliding gates are the strongest choice for short driveways, sloped approaches, and wide entrances over 4 metres — common on newer Essex developments and rural plots. Electric swing gates suit properties with generous swing clearance and remain the most popular choice across the county. Hardwood gates in iroko or oak work beautifully on period homes, farmhouses, and barn conversions throughout rural Essex. Steel and aluminium gates offer maximum longevity with minimal maintenance and suit modern builds from Brentwood to Colchester. A site survey is always the right starting point.',
+    answer: 'The right gate depends on your driveway geometry, property style, and security priorities. Electric sliding gates are the strongest choice for short driveways, sloped approaches, and wide entrances over 4 metres, which are common on newer Essex developments and rural plots. Electric swing gates suit properties with generous swing clearance and remain the most popular choice across the county. Hardwood gates in iroko or oak work beautifully on period homes, farmhouses, and barn conversions throughout rural Essex. Steel and aluminium gates offer maximum longevity with minimal maintenance and suit modern builds from Brentwood to Colchester. A site survey is always the right starting point.',
   },
   {
     question: 'Can automation be added to my existing gates?',
@@ -48,11 +48,11 @@ const homepageFaqs = [
   },
   {
     question: 'Are electric driveway gates safe around children and pets?',
-    answer: 'Electric gates installed to current UK standards are very safe. All automated gate systems must comply with BS EN 12453 and the Machinery Directive, which mandate safety edges on the leading face of the gate, photocell beams across the opening to detect obstructions, and auto-reverse functionality. Competent installers commission and test every safety system before handover and provide documentation. Our network only includes firms who install and commission to the required standards.',
+    answer: 'Electric gates installed to current UK standards are very safe. All automated gate systems must comply with BS EN 12453 and the Machinery Directive, which mandate safety edges on the leading face of the gate, photocell beams across the opening to detect obstructions, and auto-reverse functionality that stops and reverses the gate if it meets resistance. Competent installers commission and test every safety system before handover and provide documentation. Our network only includes firms who install and commission to the required standards.',
   },
   {
     question: 'What maintenance do driveway gates need?',
-    answer: 'Annual servicing is the baseline for any automated gate system. A service covers motor lubrication, drive mechanism inspection, safety sensor calibration, hinge adjustment, track cleaning on sliding systems, battery backup testing, and a full structural check. Hardwood gates require re-oiling or re-staining every one to two years. Powder-coated metal gates need very little beyond an occasional wash with mild detergent. The cost of annual servicing — typically £120 to £200 in Essex — is a fraction of what an unmaintained motor replacement costs.',
+    answer: 'Annual servicing is the baseline for any automated gate system. A service covers motor lubrication, drive mechanism inspection, safety sensor calibration, hinge adjustment, track cleaning on sliding systems, battery backup testing, and a full structural check. Hardwood gates require re-oiling or re-staining every one to two years. Powder-coated metal gates need very little beyond an occasional wash with mild detergent. The cost of annual servicing in Essex is typically £120 to £200, which is a fraction of what an unmaintained motor replacement costs.',
   },
   {
     question: 'What happens to my electric gates during a power cut?',
@@ -70,8 +70,8 @@ export default function HomePage() {
       <main className="flex-grow">
 
         <Hero
-          title="Driveway Gates Essex — Vetted Installers, Free Quotes"
-          subtitle="Compare experienced, fully insured driveway gate specialists across Essex. Electric sliding gates, swing gates, hardwood, wrought iron, and automation — every type, every budget, every postcode."
+          title="Driveway Gates Essex: Vetted Installers, Free Quotes"
+          subtitle="Compare experienced, fully insured driveway gate specialists across Essex. Electric sliding gates, swing gates, hardwood, wrought iron, and automation for every property type and budget."
           image="/images/gates/gate-hero-wrought-iron-sunset-cobblestone.png"
           onOpenModal={() => setIsModalOpen(true)}
         />
@@ -88,10 +88,10 @@ export default function HomePage() {
                 </h2>
                 <div className="space-y-5 text-gray-600 leading-relaxed">
                   <p>
-                    Finding a genuinely good gate installer in Essex takes more than a Google search. The market is full of general builders who take occasional gate work alongside everything else. The results speak for themselves — misaligned posts, underpowered motors, and automation that fails within two years.
+                    Finding a genuinely good gate installer in Essex takes more than a Google search. The market is full of general builders who take occasional gate work alongside everything else. The results speak for themselves: misaligned posts, underpowered motors, and automation that fails within two years.
                   </p>
                   <p>
-                    Driveway Gates Essex exists to solve that problem. We have built a network of dedicated gate installation specialists — firms that do this work every day, across every corner of the county. From the commuter belt in Brentwood and Loughton to the coastal properties of Frinton and Mersea Island, our installers understand Essex driveways, Essex ground conditions, and Essex planning requirements.
+                    Driveway Gates Essex exists to solve that problem. We have built a network of dedicated gate installation specialists, firms that do this work every day across every corner of the county. From the commuter belt in Brentwood and Loughton to the coastal properties of Frinton and Mersea Island, our installers understand Essex driveways, Essex ground conditions, and Essex planning requirements.
                   </p>
                   <p>
                     Every firm in our network has completed a minimum of 50 residential gate installations, holds full public liability cover, and provides written warranties on both the gate and the automation. You get up to three independent quotes, a free site survey with each one, and no obligation to proceed. The matching service costs you nothing at any stage.
@@ -130,7 +130,7 @@ export default function HomePage() {
                 {
                   icon: <Shield className="w-6 h-6" />,
                   title: 'Insured and Warranted',
-                  desc: 'Full public liability cover as standard. Written warranties on the gate structure and the automation system separately — not a blanket guarantee that covers nothing.',
+                  desc: 'Full public liability cover as standard. Written warranties on the gate structure and the automation system are provided separately, not as a blanket guarantee that covers nothing.',
                 },
                 {
                   icon: <Clock className="w-6 h-6" />,
@@ -140,7 +140,7 @@ export default function HomePage() {
                 {
                   icon: <Star className="w-6 h-6" />,
                   title: 'Up to 3 Free Quotes',
-                  desc: 'Compare independent quotes side by side. You choose who to go with — or nobody, if the timing is not right. Zero pressure at every stage.',
+                  desc: 'Compare independent quotes side by side. You choose who to go with, or nobody if the timing is not right. Zero pressure at every stage.',
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
@@ -158,7 +158,7 @@ export default function HomePage() {
           <div className="container-width">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Gate Types We Cover Across Essex</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Electric sliding, swing, hardwood, wrought iron, full automation retrofits, and repair — specialist installers for every gate type and every Essex property.</p>
+              <p className="text-gray-600 max-w-2xl mx-auto">Electric sliding, swing, hardwood, wrought iron, full automation retrofits, and repair. Specialist installers for every gate type and every Essex property.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map(service => (
@@ -212,14 +212,14 @@ export default function HomePage() {
           <div className="container-width">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Essex Driveway Gate Installation Costs</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Realistic price ranges based on completed Essex installations. Every project is different — a site survey gives you the precise figure.</p>
+              <p className="text-gray-600 max-w-2xl mx-auto">Realistic price ranges based on completed Essex installations. Every project is different, and a site survey gives you the precise figure.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {pricingTiers.map(tier => (
                 <div key={tier.slug} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                   <h3 className="font-display font-bold text-gray-900 mb-2">{tier.treatment}</h3>
                   <p className="text-2xl font-bold text-brand-600 mb-1">
-                    £{tier.priceFrom.toLocaleString()} <span className="text-base text-gray-400 font-normal">–</span> £{tier.priceTo.toLocaleString()}
+                    £{tier.priceFrom.toLocaleString()} <span className="text-base text-gray-400 font-normal">to</span> £{tier.priceTo.toLocaleString()}
                   </p>
                   <p className="text-xs text-gray-500 mb-3">{tier.alignerSets} · {tier.typicalDuration}</p>
                   <p className="text-sm text-gray-600 leading-relaxed">{tier.description}</p>
@@ -250,7 +250,7 @@ export default function HomePage() {
                 {
                   step: '1',
                   title: 'Submit Your Enquiry',
-                  desc: 'Tell us your Essex postcode, the gate type you are considering, and your approximate budget. No commitment required — we just need enough to make a good match.',
+                  desc: 'Tell us your Essex postcode, the gate type you are considering, and your approximate budget. No commitment required. We just need enough information to make a good match.',
                 },
                 {
                   step: '2',
@@ -260,7 +260,7 @@ export default function HomePage() {
                 {
                   step: '3',
                   title: 'Compare Quotes and Choose',
-                  desc: 'Each installer visits your property, assesses the site, and provides a detailed written quote. You compare them on your own terms. No pressure, no obligation.',
+                  desc: 'Each installer visits your property, assesses the site, and provides a detailed written quote. You compare them on your own terms with no pressure and no obligation.',
                 },
               ].map(item => (
                 <div key={item.step} className="text-center">
@@ -289,23 +289,23 @@ export default function HomePage() {
                 </h2>
                 <div className="space-y-5 text-gray-600 leading-relaxed">
                   <p>
-                    Essex is one of the most varied counties in the south of England for residential property. The western edge — Loughton, Chigwell, Buckhurst Hill — sits in the Green Belt and is characterised by large detached homes on generous plots, where wrought iron estate gates and full automation with video intercom are the standard expectation.
+                    Essex is one of the most varied counties in the south of England for residential property. The western edge, covering Loughton, Chigwell, and Buckhurst Hill, sits in the Green Belt and is characterised by large detached homes on generous plots, where wrought iron estate gates and full automation with video intercom are the standard expectation.
                   </p>
                   <p>
-                    Mid Essex — Chelmsford, Brentwood, Shenfield — mixes modern new-build developments with Victorian and Edwardian properties, creating demand for everything from slim aluminium sliding gates on compact driveways to bespoke hardwood gates on older homes with period detailing.
+                    Mid Essex, covering Chelmsford, Brentwood, and Shenfield, mixes modern new-build developments with Victorian and Edwardian properties, creating demand for everything from slim aluminium sliding gates on compact driveways to bespoke hardwood gates on older homes with period detailing.
                   </p>
                   <p>
-                    Coastal and rural Essex presents different challenges: salt air demands the right material specification, rural plot sizes often allow for grander gate designs, and agricultural ground conditions require experienced groundwork. Our installers know these differences and account for them from the first site visit.
+                    Coastal and rural Essex presents different challenges entirely. Salt air demands the right material specification, rural plot sizes often allow for grander gate designs, and agricultural ground conditions require experienced groundwork. Our installers know these differences and account for them from the first site visit.
                   </p>
                 </div>
               </div>
               <div className="space-y-4">
                 {[
-                  { label: 'West Essex — Loughton, Chigwell, Epping, Waltham Abbey', detail: 'Large plots, Green Belt properties, high-specification automation and video access control' },
-                  { label: 'Mid Essex — Chelmsford, Brentwood, Shenfield, Ingatestone', detail: 'Period and new-build mix, sliding and swing gates, strong demand for bespoke hardwood' },
-                  { label: 'South Essex — Rayleigh, Billericay, Basildon, Southend', detail: 'Urban and suburban driveways, space-efficient sliding systems, competitive pricing' },
-                  { label: 'North Essex — Colchester, Halstead, Saffron Walden', detail: 'Rural and market town properties, traditional wrought iron and hardwood popular' },
-                  { label: 'Coastal Essex — Mersea, Frinton, Burnham-on-Crouch', detail: 'Salt-resistant material specification essential, rural plot scale, larger gate designs' },
+                  { label: 'West Essex: Loughton, Chigwell, Epping, Waltham Abbey', detail: 'Large plots, Green Belt properties, high-specification automation and video access control' },
+                  { label: 'Mid Essex: Chelmsford, Brentwood, Shenfield, Ingatestone', detail: 'Period and new-build mix, sliding and swing gates, strong demand for bespoke hardwood' },
+                  { label: 'South Essex: Rayleigh, Billericay, Basildon, Southend', detail: 'Urban and suburban driveways, space-efficient sliding systems, competitive pricing' },
+                  { label: 'North Essex: Colchester, Halstead, Saffron Walden', detail: 'Rural and market town properties, traditional wrought iron and hardwood popular' },
+                  { label: 'Coastal Essex: Mersea, Frinton, Burnham-on-Crouch', detail: 'Salt-resistant material specification essential, rural plot scale, larger gate designs' },
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100">
                     <CheckCircle className="w-5 h-5 text-brand-500 flex-shrink-0 mt-0.5" />
@@ -323,7 +323,7 @@ export default function HomePage() {
         {/* FAQ */}
         <section className="section-padding bg-gray-50">
           <div className="container-width max-w-3xl">
-            <FAQ faqs={homepageFaqs} title="Driveway Gates in Essex — Frequently Asked Questions" />
+            <FAQ faqs={homepageFaqs} title="Driveway Gates in Essex: Frequently Asked Questions" />
           </div>
         </section>
 
@@ -331,7 +331,7 @@ export default function HomePage() {
         <section className="section-padding bg-brand-900 text-white">
           <div className="container-width text-center">
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Ready to Get Quotes for Your Essex Property?</h2>
-            <p className="text-brand-200 max-w-2xl mx-auto mb-8">Submit your enquiry in under two minutes. We will match you with up to three vetted Essex gate installers — free site surveys, detailed written quotes, no obligation.</p>
+            <p className="text-brand-200 max-w-2xl mx-auto mb-8">Submit your enquiry in under two minutes. We will match you with up to three vetted Essex gate installers for free site surveys, detailed written quotes, and no obligation.</p>
             <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">
               Get Free Quotes Now
             </button>
