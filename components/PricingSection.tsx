@@ -22,7 +22,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
 
   const intro = cityName
     ? `Driveway gate prices in ${cityName} vary depending on the gate type, material, and level of automation. Below are typical costs from vetted installers in the ${cityName} area. All prices are in GBP and include full installation.`
-    : 'Driveway gate prices across London vary depending on the gate type, material, automation requirements, and design complexity. Below are typical costs from installers in our network. All prices are in GBP and include installation.';
+    : 'Driveway gate prices across Essex vary depending on the gate type, material, automation requirements, and design complexity. Below are typical costs from installers in our network. All prices are in GBP and include installation.';
 
   return (
     <section className="mb-16">
@@ -112,7 +112,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
       {cityName && (
         <div className="mt-8 prose prose-sm max-w-none text-gray-600">
           <p>
-            The cost of driveway gates in {cityName} depends on several factors: the material (wood, steel, aluminium, or wrought iron), whether you want automation, the width of your driveway entrance, and any bespoke design requirements. London prices tend to sit at the higher end nationally due to labour costs and access logistics, but the installers in our {cityName} network are competitively priced for the quality of work they deliver. Every installer offers a free site survey so you can get an accurate, itemised quote before making any commitment.
+            The cost of driveway gates in {cityName} depends on several factors: the material (wood, steel, aluminium, or wrought iron), whether you want automation, the width of your driveway entrance, and any bespoke design requirements. Prices vary across Essex depending on site conditions and specification, but the installers in our {cityName} network are competitively priced for the quality of work they deliver. Every installer offers a free site survey so you can get an accurate, itemised quote before making any commitment.
           </p>
         </div>
       )}
