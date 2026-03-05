@@ -16,6 +16,8 @@ import { Testimonials } from '@/components/Testimonials';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
+import { siteConfig } from '@/data/site';
+import { FAQSchema } from '@/components/FAQSchema';
 
 const serviceLocationContent: Record<string, {
   intro: (city: string) => string[];
@@ -169,12 +171,28 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
     { icon: <Users className="w-6 h-6" />, title: 'Matched to Your Gate Type', desc: `We connect you with ${cityName} installers who have specific experience with ${service.title.toLowerCase()}, not a general list of whoever is available.` },
   ];
 
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    name: `${service.title} in ${cityName}`,
+    url: `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/`,
+    description: `Find vetted ${service.title.toLowerCase()} specialists in ${cityName}, Essex. Free site survey, written quotes, no obligation.`,
+    areaServed: {
+      '@type': 'City',
+      name: cityName,
+      containedInPlace: { '@type': 'State', name: 'Essex' },
+    },
+    serviceType: service.title,
+    priceRange: '\u00a3\u00a3',
+  };
+
   return (
     <>
+      <FAQSchema faqs={service.faqs} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-
         <section className="bg-gray-900 text-white relative overflow-hidden">
           <div className="absolute inset-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
