@@ -17,14 +17,42 @@ import { LeadFormModal } from '@/components/LeadFormModal';
 import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
 import { Testimonials } from '@/components/Testimonials';
+import { FAQSchema } from '@/components/FAQSchema';
+import { siteConfig } from '@/data/site';
 
 export default function CityPage({ params }: { params: { city: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cityName = getCityBySlug(params.city);
   if (!cityName) notFound();
 
+  const cityFaqs = [...FAQS_LOCATION, ...FAQS_SERVICES];
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HomeAndConstructionBusiness',
+    name: `Driveway Gate Installers in ${cityName}`,
+    url: `${siteConfig.url}/location/${params.city}/`,
+    description: `Find vetted driveway gate installers in ${cityName}, Essex. Free site surveys, written quotes, and up to 3 options with no obligation.`,
+    areaServed: {
+      '@type': 'City',
+      name: cityName,
+      containedInPlace: { '@type': 'State', name: 'Essex' },
+    },
+    serviceType: [
+      'Electric Sliding Gate Installation',
+      'Electric Swing Gate Installation',
+      'Wooden Driveway Gate Installation',
+      'Metal Driveway Gate Installation',
+      'Gate Automation Installation',
+      'Gate Repair and Maintenance',
+    ],
+    priceRange: '££',
+  };
+
   return (
     <>
+      <FAQSchema faqs={cityFaqs} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
