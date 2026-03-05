@@ -11,15 +11,15 @@ import { LeadFormModal } from '@/components/LeadFormModal';
 
 // Update these to match your actual live service x location pages
 const SIDEBAR_SERVICE_LINKS = [
-  { label: 'Electric Sliding Gates — Barnet', href: '/services/electric-sliding-gates/barnet/' },
-  { label: 'Electric Swing Gates — Richmond', href: '/services/electric-swing-gates/richmond/' },
-  { label: 'Wooden Driveway Gates — Camden', href: '/services/wooden-driveway-gates/camden/' },
-  { label: 'Wrought Iron Gates — Kensington', href: '/services/wrought-iron-gates/kensington/' },
-  { label: 'Aluminium Gates — Bromley', href: '/services/aluminium-gates/bromley/' },
-  { label: 'Gate Automation — Harrow', href: '/services/gate-automation/harrow/' },
-  { label: 'Gate Intercom Systems — Wandsworth', href: '/services/gate-intercom-systems/wandsworth/' },
-  { label: 'Gate Safety Inspections — London', href: '/services/gate-safety-inspections/london/' },
-  { label: 'Gate Repairs — Ealing', href: '/services/gate-repairs-maintenance/ealing/' },
+  { label: 'Electric Sliding Gates — Chelmsford', href: '/services/electric-sliding-gates/chelmsford/' },
+  { label: 'Electric Swing Gates — Brentwood', href: '/services/electric-swing-gates/brentwood/' },
+  { label: 'Wooden Driveway Gates — Colchester', href: '/services/wooden-driveway-gates/colchester/' },
+  { label: 'Metal Driveway Gates — Loughton', href: '/services/metal-driveway-gates/loughton/' },
+  { label: 'Automated Gate Systems — Chigwell', href: '/services/automated-gate-systems/chigwell/' },
+  { label: 'Electric Sliding Gates — Southend-on-Sea', href: '/services/electric-sliding-gates/southend-on-sea/' },
+  { label: 'Electric Swing Gates — Saffron Walden', href: '/services/electric-swing-gates/saffron-walden/' },
+  { label: 'Gate Repair and Maintenance — Braintree', href: '/services/gate-repair-and-maintenance/braintree/' },
+  { label: 'Metal Driveway Gates — Epping', href: '/services/metal-driveway-gates/epping/' },
 ];
 
 function BlogCtaBanner({ onOpenModal }: { onOpenModal: () => void }) {
@@ -35,7 +35,7 @@ function BlogCtaBanner({ onOpenModal }: { onOpenModal: () => void }) {
         <div className="flex-1 text-center md:text-left">
           <p className="text-[10px] font-bold uppercase tracking-widest text-brand-400 mb-1">Free Matching Service</p>
           <h3 className="text-lg md:text-xl font-bold text-white leading-snug mb-1">Ready to get driveway gate quotes?</h3>
-          <p className="text-brand-200 text-sm">Get matched with vetted London installers — no obligation, no cost.</p>
+          <p className="text-brand-200 text-sm">Get matched with vetted Essex installers — no obligation, no cost.</p>
         </div>
         <div className="flex-shrink-0">
           <button
@@ -252,7 +252,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
                 {/* CTA */}
                 <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
                   <h3 className="text-lg font-display font-bold text-gray-900 mb-3">Get your free gate quotes</h3>
-                  <p className="text-gray-500 text-sm mb-5">Compare up to 3 vetted London installers — free, no obligation.</p>
+                  <p className="text-gray-500 text-sm mb-5">Compare up to 3 vetted Essex installers — free, no obligation.</p>
                   <button onClick={() => setIsModalOpen(true)} className="block w-full btn-primary text-center">
                     Find Installers
                   </button>
