@@ -18,7 +18,7 @@ const GATE_TYPES = [
 ];
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbwIkSKA8qGfLjJ3e_lUUJp5U0oNZLo51wpZtXvdvNSaPXNyynWrdtN-ZcoYql3hcAjy/exec';
+  'https://script.google.com/macros/s/AKfycbyx9vLUlFI9ANUU10eTA1Uwu7dL5rVd5ZYZzDb1QgmEc7u3l668RFac9J_we3lC88Me/exec';
 
 export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,7 +46,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         location: formData.location || city || '',
         treatment: formData.treatment || service || '',
         page: window.location.href,
-        source: 'Driveway Gates London',
+        source: 'Driveway Gates Essex',
       };
 
       const res = await fetch(GOOGLE_SCRIPT_URL, {
@@ -116,7 +116,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         </select>
 
         {!city && (
-          <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Your London area or postcode *" className={inputClass} />
+          <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Your Essex town or postcode *" className={inputClass} />
         )}
 
         <button
