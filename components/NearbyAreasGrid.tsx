@@ -26,7 +26,7 @@ export function NearbyAreasGrid({ cityName, serviceSlug, serviceName, initialVis
 
   const description = serviceName
     ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? Our vetted installers serve homeowners across ${cityName} and the surrounding areas listed below. Whether you are in the town centre or a nearby suburb, we will match you with the closest experienced installer.`
-    : `Our driveway gate installers in ${cityName} serve homeowners from across the wider London area. If you live in any of the neighbourhoods, suburbs, or nearby areas listed below, you are within reach of expert gate installation. Get matched with a local installer today.`;
+    : `Our driveway gate installers in ${cityName} serve homeowners from across the surrounding Essex area. If you live in any of the towns, villages, or nearby areas listed below, you are within reach of expert gate installation. Get matched with a local installer today.`;
 
   return (
     <section className="mb-16">
