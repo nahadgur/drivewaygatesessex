@@ -45,10 +45,10 @@ export default function BlogIndexPage() {
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
             <p className="text-[10px] font-bold uppercase tracking-widest text-brand-400 mb-3">Expert Advice</p>
             <h1 className="text-3xl md:text-5xl font-display font-bold text-white max-w-3xl leading-tight mb-4">
-              Driveway Gate Guides for London Homeowners
+              Driveway Gate Guides for Essex Homeowners
             </h1>
             <p className="text-brand-100 text-sm md:text-base max-w-xl">
-              Straight-talking advice on gate types, materials, automation, planning rules, and getting the best value in London.
+              Straight-talking advice on gate types, materials, automation, planning rules, and getting the best value across Essex.
             </p>
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function BlogIndexPage() {
                     Ready to Get Quotes for Your Driveway Gates?
                   </h3>
                   <p className="text-brand-200 text-sm">
-                    We match London homeowners with vetted, insured gate installers. Free, no obligation.
+                    We match Essex homeowners with vetted, insured gate installers. Free, no obligation.
                   </p>
                 </div>
                 <div className="flex-shrink-0">
