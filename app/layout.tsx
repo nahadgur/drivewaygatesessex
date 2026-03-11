@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
   verification: {
-    google: 'CfH9m4bqmLDzWq40hTPDOaxmPJJonUeUW5a8J7Ud2Hs',
+    google: 'JsWCQ9uKg4SvXuH4AqWT2bZpmDqUxrChRSSqL6JGm4c',
   },
   icons: {
     icon: [
@@ -95,12 +95,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XHLKXPN7ZN" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-V1791YT0S9" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XHLKXPN7ZN');`}
+          gtag('config', 'G-V1791YT0S9');`}
         </Script>
         {children}
       </body>
