@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
+  verification: {
+    google: 'CfH9m4bqmLDzWq40hTPDOaxmPJJonUeUW5a8J7Ud2Hs',
+  },
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -28,13 +31,13 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     locale: 'en_GB',
-    images: [{ url: '/android-chrome-512x512.png', width: 512, height: 512, alt: siteConfig.name }],
+    images: [{ url: '/icon-512x512.png', width: 512, height: 512, alt: siteConfig.name }],
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ['/android-chrome-512x512.png'],
+    images: ['/icon-512x512.png'],
   },
 };
 
@@ -52,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'Organization',
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/android-chrome-512x512.png`,
+    logo: `${siteConfig.url}/icon-512x512.png`,
   };
 
   const localBusinessSchema = {
@@ -60,7 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'HomeAndConstructionBusiness',
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/android-chrome-512x512.png`,
+    logo: `${siteConfig.url}/icon-512x512.png`,
     description: siteConfig.description,
     areaServed: {
       '@type': 'State',
@@ -92,16 +95,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       </head>
       <body className="min-h-screen flex flex-col">
-        {/* Replace G-XXXXXXXXXX with your GA4 measurement ID */}
-        {/*
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-XHLKXPN7ZN" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');`}
+          gtag('config', 'G-XHLKXPN7ZN');`}
         </Script>
-        */}
         {children}
       </body>
     </html>
