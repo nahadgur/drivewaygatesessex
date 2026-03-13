@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-V1791YT0S9" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-G2JZMVQLGT" strategy="afterInteractive" />
         <Script id="gtag-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
