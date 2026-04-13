@@ -1,8 +1,8 @@
 // data/site.ts
 export const siteConfig = {
   name: 'Driveway Gates Essex',
-  domain: 'drivewaygatessex.co.uk',
-  url: 'https://www.drivewaygatessex.co.uk',
+  domain: 'drivewaygatesessex.co.uk',
+  url: 'https://www.drivewaygatesessex.co.uk',
   description: 'Find vetted driveway gate installers across Essex. Compare free quotes for electric sliding gates, swing gates, hardwood gates, metal gates, automation systems, and repairs.',
   tagline: 'Essex Gate Installers, Vetted and Ready',
 };
