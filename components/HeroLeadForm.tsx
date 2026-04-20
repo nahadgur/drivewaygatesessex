@@ -5,22 +5,14 @@ import { CheckCircle } from 'lucide-react';
 
 interface HeroLeadFormProps {
   city?: string;
+  // Kept for caller compatibility; not used in form UI or payload.
   service?: string;
 }
-
-const GATE_TYPES = [
-  'Electric Sliding Gates',
-  'Electric Swing Gates',
-  'Wooden Driveway Gates',
-  'Metal Driveway Gates',
-  'Automated Gate Systems',
-  'Gate Repair and Maintenance',
-];
 
 const GOOGLE_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbyx9vLUlFI9ANUU10eTA1Uwu7dL5rVd5ZYZzDb1QgmEc7u3l668RFac9J_we3lC88Me/exec';
 
-export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
+export function HeroLeadForm({ city }: HeroLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [formData, setFormData] = useState({
@@ -28,10 +20,9 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
     email: '',
     phone: '',
     location: city || '',
-    treatment: service || '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -44,7 +35,6 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         email: formData.email,
         phone: formData.phone,
         location: formData.location || city || '',
-        treatment: formData.treatment || service || '',
         page: window.location.href,
         source: 'Driveway Gates Essex',
       };
@@ -107,13 +97,6 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
           <input required name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number *" className={inputClass} />
           <input required name="email" type="email" value={formData.email} onChange={handleChange} placeholder="Email Address *" className={inputClass} />
         </div>
-
-        <select required name="treatment" value={formData.treatment} onChange={handleChange} className={inputClass + " appearance-none cursor-pointer"}>
-          <option value="" disabled>What type of gate? *</option>
-          {GATE_TYPES.map(t => (
-            <option key={t} value={t}>{t}</option>
-          ))}
-        </select>
 
         {!city && (
           <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Your Essex town or postcode *" className={inputClass} />
