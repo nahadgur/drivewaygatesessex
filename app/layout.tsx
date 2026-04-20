@@ -11,7 +11,6 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  alternates: { canonical: siteConfig.url },
   robots: { index: true, follow: true },
   verification: {
     google: 'CfH9m4bqmLDzWq40hTPDOaxmPJJonUeUW5a8J7Ud2Hs',
@@ -56,14 +55,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: siteConfig.name,
     url: siteConfig.url,
     logo: `${siteConfig.url}/icon-512x512.png`,
-  };
-
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
-    name: siteConfig.name,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}/icon-512x512.png`,
     description: siteConfig.description,
     areaServed: {
       '@type': 'State',
@@ -73,18 +64,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name: 'United Kingdom',
       },
     },
-    serviceType: [
-      'Electric Sliding Gate Installation',
-      'Electric Swing Gate Installation',
-      'Wooden Driveway Gate Installation',
-      'Metal Driveway Gate Installation',
-      'Gate Automation Installation',
-      'Gate Repair and Maintenance',
-    ],
-    priceRange: '££',
-    currenciesAccepted: 'GBP',
-    paymentAccepted: 'Cash, Credit Card, Bank Transfer',
-    openingHours: 'Mo-Sa 08:00-18:00',
   };
 
   return (
@@ -92,7 +71,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       </head>
       <body className="min-h-screen flex flex-col">
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-G2JZMVQLGT" strategy="afterInteractive" />
@@ -100,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-V1791YT0S9');`}
+          gtag('config', 'G-G2JZMVQLGT');`}
         </Script>
         {children}
       </body>
