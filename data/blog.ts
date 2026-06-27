@@ -619,6 +619,81 @@ const article10: BlogArticle = {
   ],
 };
 
+// ARTICLE 11 — Battery Backup and Power Cuts
+const article11: BlogArticle = {
+  slug: 'electric-gate-battery-backup-and-power-cuts-essex',
+  title: 'Electric Gate Battery Backup and Power Cuts in Essex',
+  metaTitle: 'Electric Gate Battery Backup Essex | Power Cuts and Manual Release',
+  metaDescription: 'What happens to an automated driveway gate during a power cut in Essex, how battery backup keeps it working, how the manual release works, and what to look for when adding backup.',
+  category: 'Automation',
+  publishDate: '2026-06-23',
+  featuredImage: '/images/gates/gate-automation-intercom-evening-lighting.png',
+  excerpt: 'A power cut should not trap you behind your own gates. Here is how battery backup and the manual release keep an automated Essex gate working when the mains supply fails.',
+  content: [
+    { type: 'p', text: 'An automated driveway gate is wonderfully convenient until the power goes off and you find yourself sitting on the drive wondering how to get out. Every motorised gate depends on a mains supply, and when that supply fails the motor cannot drive the gate open or closed. This matters more in some parts of Essex than others, because storms rolling in off the North Sea and overhead supply lines in rural villages mean power interruptions are a genuine fact of life rather than a rare event. The good news is that a well-specified gate is designed for exactly this situation, and you have two lines of defence: a battery backup unit that keeps the gate working automatically through a short outage, and a manual release that lets you move the gate by hand when the battery is also flat.' },
+    { type: 'p', text: 'Understanding how both work, and what to ask for when you have a gate installed or serviced, removes the anxiety. A power cut should never leave you locked in or locked out of your own property, and with the right setup it will not.' },
+    { type: 'h2', text: 'What Actually Happens to the Gate When the Power Goes Off' },
+    { type: 'p', text: 'When the mains supply to the gate fails, the control board loses power and the motor stops. The gate freezes in whatever position it was in at that moment, whether fully open, fully closed, or somewhere in between. Remote handsets, keypads, and intercoms stop responding because they all rely on the powered control board. Nothing is damaged by this. The gate is simply inert until power is restored or you intervene manually.' },
+    { type: 'p', text: 'For most households the closed position is the default, which means a power cut tends to leave you on the wrong side of a shut gate. This is precisely why backup matters. Without it, a brief outage during a winter storm becomes a real inconvenience, and on a property where the gate is the only vehicle access it can stop you leaving for work or getting home.' },
+    { type: 'h2', text: 'How Battery Backup Keeps the Gate Working' },
+    { type: 'p', text: 'A battery backup unit is a rechargeable battery and a small charging circuit fitted alongside the gate control board. While the mains is present, the unit sits quietly on charge. The moment the supply fails, it takes over and powers the motor and control electronics so the gate carries on responding to your remote and keypad as normal. For the typical short outages that make up the large majority of power cuts, you may not even notice the supply has gone.' },
+    { type: 'p', text: 'How long a backup lasts depends on the battery capacity and how often the gate is operated during the outage. As a general guide, a domestic backup unit is designed to give a number of opening and closing cycles rather than to power the gate indefinitely, and capacity is usually quoted as cycles rather than hours. A gate that is opened a handful of times a day will ride out a typical outage comfortably, while a busy gate operated constantly will exhaust the battery sooner. When the mains returns, the unit recharges itself automatically ready for the next interruption.' },
+    { type: 'p', text: 'The points worth checking with your installer are these:' },
+    { type: 'list', items: [
+      'Whether battery backup is included in the quote or is a chargeable extra, because it is often optional.',
+      'How many gate cycles the battery is rated to deliver on a full charge for your specific gate weight.',
+      'Whether the unit powers only the motor or also the intercom, keypad, and any access control you rely on.',
+      'How the unit signals a low or failed battery so you are warned before it stops working entirely.',
+      'Whether the backup battery is a wearing part with a typical replacement interval, so you can plan for it.',
+    ] },
+    { type: 'p', text: 'A battery is a consumable. Rechargeable backup batteries lose capacity over years of charge cycles and eventually need replacing, which is one of the routine items a good service visit should check.' },
+    {
+      type: 'internal-link',
+      href: '/blog/electric-gate-maintenance-essex/',
+      text: 'annual gate service',
+      context: 'Battery condition is one of the items a proper annual gate service should test, so the backup is ready when you actually need it.',
+    },
+    { type: 'h2', text: 'The Manual Release: Your Fallback When the Battery Is Flat' },
+    { type: 'p', text: 'Every compliant automated gate has a manual release mechanism, and it is the fallback that works even when both the mains and the battery have failed. The release disengages the motor from the gate so the leaf can be pushed by hand. It is operated with a dedicated key supplied at handover, and the exact method varies by motor type. Ram-arm swing motors usually have a release lever or a lockable cover that frees the arm. Underground motors have a release access point near the post. Sliding gate motors have a release that disengages the drive gear from the rack so the gate rolls freely along its track.' },
+    { type: 'p', text: 'The single most important thing about the manual release is knowing where it is and how to use it before you ever need it. A power cut during a dark, wet Essex evening is the worst possible time to be discovering the procedure for the first time. Make sure your installer demonstrates the release at handover, that you store the release key somewhere accessible rather than locked inside the house the gate guards, and that everyone in the household who drives knows the routine. Once you have done it once it takes seconds.' },
+    { type: 'p', text: 'After the power returns, you re-engage the motor by reversing the release procedure and locking it again. The gate then resumes normal automatic operation. Gate safety guidance from the Health and Safety Executive emphasises that powered gates must be safe to operate throughout their life, and a clearly understood manual release is part of that safe operation.' },
+    {
+      type: 'external-link',
+      href: 'https://www.hse.gov.uk/work-equipment-machinery/electric-gates.htm',
+      text: 'HSE guidance on powered gate safety',
+      source: 'Health and Safety Executive',
+      rel: 'noopener noreferrer',
+    },
+    { type: 'h2', text: 'Why This Matters More in Storm-Prone and Coastal Essex' },
+    { type: 'p', text: 'Power interruptions are not evenly spread across the county. Coastal and low-lying parts of Essex around the estuaries and the seafront towns take the brunt of winter storms coming off the North Sea, and high winds bring down overhead lines and trip supplies more often than in the sheltered inland districts. Rural villages served by overhead rather than underground cabling also see more frequent and longer outages, because a single fallen branch on a country lane can cut power to a whole hamlet.' },
+    { type: 'p', text: 'If your property is in one of these areas, battery backup moves from a nice-to-have to something close to essential, and the salt-laden coastal air makes the case stronger still by accelerating wear on every exposed component. A gate that is the sole vehicle access to a coastal or rural Essex home should almost always be specified with backup from the outset, and the manual release routine should be second nature to the household.' },
+    {
+      type: 'internal-link',
+      href: '/blog/driveway-gates-coastal-essex/',
+      text: 'coastal Essex gate considerations',
+      context: 'Coastal locations bring their own demands on a gate, and reliable backup against frequent storm outages is one of the most important.',
+    },
+    { type: 'h2', text: 'Adding Battery Backup to an Existing Gate' },
+    { type: 'p', text: 'If you already have an automated gate without backup, a unit can usually be added without replacing the motor or the gate. The installer matches a backup unit to your existing control board and motor voltage, fits it within the control housing or a nearby enclosure, and commissions it so the gate switches over cleanly when the mains drops. This is a far smaller job than a new installation and is one of the more worthwhile upgrades for any household tired of being caught out by outages.' },
+    { type: 'p', text: 'The same assessment that applies to any retrofit applies here: the existing motor and control board need to be in sound condition and compatible with the backup unit. An installer will confirm compatibility during the assessment rather than assuming it.' },
+    {
+      type: 'internal-link',
+      href: '/blog/electric-gate-automation-retrofit-essex/',
+      text: 'retrofitting gate automation',
+      context: 'If you are adding automation to existing gates, specifying battery backup at the same time is far easier than adding it later.',
+    },
+    { type: 'cta' },
+    {
+      type: 'related-articles',
+      articles: [
+        { slug: 'electric-gate-maintenance-essex', title: 'Electric Gate Maintenance in Essex: What Your Annual Service Should Cover', category: 'Maintenance' },
+        { slug: 'electric-gate-automation-retrofit-essex', title: 'Adding Electric Automation to Existing Gates in Essex', category: 'Automation' },
+        { slug: 'driveway-gates-coastal-essex', title: 'Driveway Gates in Coastal Essex: Frinton, Mersea, and Southend Guide', category: 'Local Guide' },
+      ],
+    },
+  ],
+};
+
 // EXPORTS
 export const blogArticles: BlogArticle[] = [
   article1,
@@ -631,6 +706,7 @@ export const blogArticles: BlogArticle[] = [
   article8,
   article9,
   article10,
+  article11,
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
