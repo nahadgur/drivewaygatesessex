@@ -9,6 +9,31 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 
+/* Inline markdown-link parser: [text](url) rendered inline in prose.
+   Internal (root-relative) links use next/link; external links open in a new tab.
+   Backward-compatible: plain text with no [..](..) is returned unchanged. */
+function renderInline(text: string): React.ReactNode[] {
+  const out: React.ReactNode[] = [];
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let k = 0;
+  const cls = 'text-brand-600 underline underline-offset-2 decoration-1 hover:opacity-70 transition-opacity';
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) out.push(text.slice(last, m.index));
+    const label = m[1];
+    const href = m[2];
+    if (href.startsWith('/')) {
+      out.push(<Link key={`il-${k++}`} href={href} className={cls}>{label}</Link>);
+    } else {
+      out.push(<a key={`il-${k++}`} href={href} target="_blank" rel="noopener noreferrer" className={cls}>{label}</a>);
+    }
+    last = re.lastIndex;
+  }
+  if (last < text.length) out.push(text.slice(last));
+  return out;
+}
+
 // Update these to match your actual live service x location pages
 const SIDEBAR_SERVICE_LINKS = [
   { label: 'Electric Sliding Gates — Chelmsford', href: '/services/electric-sliding-gates/chelmsford/' },
@@ -121,7 +146,7 @@ function ContentRenderer({ blocks, onOpenModal }: { blocks: ContentBlock[]; onOp
           case 'p':
             elements.push(
               <p key={i} className="text-gray-600 leading-relaxed mb-5">
-                {block.text}
+                {renderInline(block.text)}
               </p>
             );
             break;
@@ -131,7 +156,7 @@ function ContentRenderer({ blocks, onOpenModal }: { blocks: ContentBlock[]; onOp
               <ul key={i} className="my-6 pl-6 space-y-2">
                 {block.items.map((item, j) => (
                   <li key={j} className="text-gray-600 leading-relaxed list-disc marker:text-brand-500">
-                    {item}
+                    {renderInline(item)}
                   </li>
                 ))}
               </ul>
