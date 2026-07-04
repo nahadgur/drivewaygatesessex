@@ -720,7 +720,7 @@ const article13: BlogArticle = {
   publishDate: '2026-07-02',
   featuredImage: '/images/gates/gate-wrought-iron-gold-crest-stately-home.png',
   excerpt: 'Deterrence is easy. A gate that a determined thief cannot simply drive through or lever open is a different specification, and in a county where relay theft and rural machinery raids are a daily problem it is the one worth understanding before you buy.',
-  draft: true,
+  draft: false,
   content: [
     { type: 'p', text: 'There is a real difference between a gate that looks secure and a gate that is secure, and in Essex it is a difference worth money. The county sits close to London, has a long rural fringe of farms, stables, and isolated lanes, and carries some of the heaviest vehicle crime figures in the country, so a driveway gate here is often bought as a working piece of security rather than a decorative flourish. Essex Police run a dedicated vehicle-crime operation, Operation Dance, that concentrates patrols on the theft hotspots and repeat streets identified across the force area, and their wider crime prevention advice makes clear that layered physical barriers are part of stopping the relay-theft teams that lift high-value cars off open drives in under a minute. A gate is one of those layers, but only if it is specified to do more than look the part.' },
     { type: 'p', text: 'This is not the same question as whether a gate improves security in general, which is a broader trade-off between deterrence, access control, and cost. This is the narrower and more technical question of what actually makes one gate harder to defeat than another, so that if you have decided physical security is the priority you know what to ask the fabricator for. The honest answer is that it comes down to four things: how the barrier is built, how it is fixed to the ground, how it locks, and what surrounds it.' },
@@ -880,6 +880,7 @@ export const blogArticles: BlogArticle[] = [
   article9,
   article10,
   article11,
+  article13,
 ];
 
 // Drafts: intentionally NOT spread into blogArticles. With dynamicParams=false
@@ -887,7 +888,6 @@ export const blogArticles: BlogArticle[] = [
 // appear in the blog index or sitemap. Move an entry into blogArticles to publish.
 export const draftArticles: BlogArticle[] = [
   article12,
-  article13,
   article14,
   article15,
   article16,
