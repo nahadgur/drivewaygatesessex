@@ -82,7 +82,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 text-base focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition";
+    "w-full px-4 py-2.5 sm:py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 text-base focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition";
 
   return (
     <div
@@ -91,7 +91,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
       onClick={handleBackdropClick}
     >
       <div
-        className={`relative w-full max-w-lg overflow-hidden bg-white rounded-2xl shadow-2xl
+        className={`relative w-full max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto overflow-x-hidden bg-white rounded-2xl shadow-2xl
           ${animationState === 'entering' ? 'animate-modal-in' : 'animate-modal-out'}`}
       >
         <button
@@ -102,7 +102,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
           <X className="w-5 h-5" />
         </button>
 
-        <div className="p-8">
+        <div className="p-5 sm:p-8">
           {isSuccess ? (
             <div className="flex flex-col items-center text-center py-8 space-y-4">
               <div className="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center">
@@ -113,15 +113,15 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
             </div>
           ) : (
             <>
-              <div className="mb-6">
-                <span className="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+              <div className="mb-4 sm:mb-6">
+                <span className="hidden sm:inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
                   Free Matching Service
                 </span>
-                <h2 className="text-2xl font-display font-bold text-gray-900">Find Your Gate Installer</h2>
-                <p className="text-gray-600 text-sm mt-1">Complete the form to get matched with vetted Essex gate installers.</p>
+                <h2 className="text-xl sm:text-2xl font-display font-bold text-gray-900">Find Your Gate Installer</h2>
+                <p className="hidden sm:block text-gray-600 text-sm mt-1">Complete the form to get matched with vetted Essex gate installers.</p>
               </div>
 
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-2.5 sm:gap-3">
                 <input required name="fullName" type="text" value={formData.fullName} onChange={handleChange} placeholder="Full name" className={inputClass} />
                 <div className="grid grid-cols-2 gap-3">
                   <input required name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone number" className={inputClass} />
