@@ -53,7 +53,7 @@ const article1: BlogArticle = {
   metaDescription: 'What do driveway gates cost in Essex in 2026? Real prices for electric sliding gates, swing gates, hardwood gates, metal gates, automation, and repairs across the county.',
   category: 'Pricing',
   publishDate: '2026-01-15',
-  featuredImage: '/images/gates/gate-hero-wrought-iron-sunset-cobblestone.png',
+  featuredImage: '/images/editorial/essex-modern-sliding-gate-guide.png',
   excerpt: 'Essex driveway gate prices vary considerably depending on material, automation, and design complexity. Here is what homeowners across the county are actually paying in 2026.',
   content: [
     { type: 'p', text: 'The price of driveway gates in Essex depends on more variables than most homeowners expect when they first start researching. Gate type, material, opening width, motor specification, access control package, and site conditions all affect the final figure, and two gates that look similar from the road can carry very different costs underneath. The figures in this guide come from completed installations across Essex in 2025 and early 2026, covering the full range from manual timber gates on rural properties to fully automated wrought iron systems with video intercom and smart phone control.' },
@@ -68,7 +68,7 @@ const article1: BlogArticle = {
       text: 'electric sliding gate installers in Chelmsford',
       context: 'Compare free quotes from electric sliding gate installers in Chelmsford who cover the full specification range.',
     },
-    { type: 'image', src: '/images/gates/gate-aluminium-sliding-modern-dark-brick-2.png', alt: 'Modern aluminium sliding gate on an Essex property' },
+    { type: 'image', src: '/images/editorial/essex-gate-site-survey.png', alt: 'A local Essex driveway gate specialist carrying out a free site survey with a homeowner' },
     { type: 'h2', text: 'Electric Swing Gates: £3,500 to £10,000 Installed' },
     { type: 'p', text: 'Electric swing gates are the most widely installed gate type in Essex and generally cost less than equivalent sliding systems. A pair of steel or aluminium swing gates with above-ground ram-arm motors, two remote handsets, and safety sensors starts from around £3,500. This is the baseline for a straightforward installation on a flat driveway with an opening of 3 to 4 metres.' },
     { type: 'p', text: 'Mid-range projects with bespoke gate design, intercom access, and underground motors sit between £5,000 and £7,500. Underground motors are concealed beneath the gate post and give a clean appearance with no visible motor hardware on the gate face. They are popular across the West Essex commuter belt and add £400 to £800 over equivalent ram-arm systems.' },
@@ -117,7 +117,7 @@ const article2: BlogArticle = {
   metaDescription: 'Choosing between electric sliding and swing gates for your Essex property? We compare both on space requirements, cost, suitability, and long-term reliability.',
   category: 'Buying Guide',
   publishDate: '2026-01-20',
-  featuredImage: '/images/gates/gate-aluminium-sliding-vertical-bar-stone-pillars.png',
+  featuredImage: '/images/editorial/essex-modern-sliding-gate-guide.png',
   excerpt: 'The choice between sliding and swing usually comes down to your driveway geometry. Here is how to work out which type is right for your Essex property.',
   content: [
     { type: 'p', text: 'The sliding versus swing debate is the first question most Essex homeowners reach when planning a driveway gate installation, and the answer is more often determined by the physical constraints of the driveway than by aesthetic preference. Both types are well-established, available in every material and design, and capable of delivering a high-quality result. Understanding the geometry requirements of each type is more useful than reading about which looks better.' },
@@ -173,7 +173,7 @@ const article3: BlogArticle = {
   metaDescription: 'Most driveway gates in Essex do not need planning permission, but the exceptions catch homeowners out. Find out when you need consent and what the rules are across Essex districts.',
   category: 'Planning',
   publishDate: '2026-01-25',
-  featuredImage: '/images/gates/gate-wrought-iron-open-manor-tree-lined.png',
+  featuredImage: '/images/editorial/essex-oak-gate-rural-guide.png',
   excerpt: 'Most Essex driveway gates fall under permitted development and need no planning application. But there are important exceptions. Here is what you need to know before proceeding.',
   content: [
     { type: 'p', text: 'Planning permission is one of the first things Essex homeowners ask about when researching driveway gates, and the good news is that most residential gate installations do not require an application. Under permitted development rights, gates meeting certain criteria can be installed without any engagement with the local planning authority. The complications arise at the edges of the standard rules, in conservation areas, on listed buildings, on properties adjacent to classified roads, and in areas where Article 4 Directions have removed some permitted development rights.' },
@@ -233,7 +233,7 @@ const article4: BlogArticle = {
   metaDescription: 'Which gate material performs best in Essex conditions? We compare hardwood, mild steel, aluminium, and wrought iron on durability, maintenance, and suitability for coastal and inland locations.',
   category: 'Materials',
   publishDate: '2026-01-28',
-  featuredImage: '/images/gates/gate-wooden-oak-swing-cottage-garden.png',
+  featuredImage: '/images/editorial/essex-oak-gate-rural-guide.png',
   excerpt: 'Essex weather is harder on gates than most homeowners expect, especially on the coast. Here is an honest comparison of how each material performs across the county.',
   content: [
     { type: 'p', text: 'Gate material choice in Essex is more consequential than in many parts of the country because of the specific conditions the county presents. The coastal fringe from Walton-on-the-Naze to Southend-on-Sea carries a salt-laden marine atmosphere that attacks unprotected steel far faster than inland conditions. The clay soils across the Essex plain hold moisture that affects foundations and lower gate ironmongery. The relatively high humidity of East Anglia matters for timber specification in ways that less humid parts of the country do not require the same attention to.' },
@@ -343,7 +343,7 @@ const article6: BlogArticle = {
   metaDescription: 'Choosing the right gate installer in Essex is the most important decision in any gate project. Here is what to check, what questions to ask, and which warning signs to watch for.',
   category: 'Buying Guide',
   publishDate: '2026-02-05',
-  featuredImage: '/images/gates/gate-wrought-iron-open-golden-hour-curved-drive.png',
+  featuredImage: '/images/editorial/essex-gate-site-survey.png',
   excerpt: 'The quality of the installer determines the quality of the gate more than any other factor. Here is a clear guide to evaluating gate installers in Essex before you commit.',
   content: [
     { type: 'p', text: 'The installer you choose is the single most important variable in a driveway gate project. A well-specified gate installed by an experienced specialist will perform reliably for decades. The same gate installed by a general builder or groundwork firm doing occasional gate work may underperform from the start: motors under-specified for the gate weight, safety sensors never properly calibrated, foundations inadequate for the post load, and no meaningful support when something goes wrong.' },

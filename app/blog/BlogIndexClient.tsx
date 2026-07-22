@@ -36,8 +36,8 @@ export default function BlogIndexPage() {
         {/* Hero */}
         <div className="relative h-[340px] md:h-[420px] overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2000&auto=format&fit=crop"
-            alt="Driveway gate guides and advice"
+            src="/images/editorial/essex-gate-site-survey.png"
+            alt="An Essex driveway gate specialist discussing a free site survey with a homeowner"
             className="w-full h-full object-cover"
             loading="eager"
           />
