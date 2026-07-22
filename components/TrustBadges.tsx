@@ -10,17 +10,17 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export function TrustBadges() {
   return (
-    <section className="py-10 bg-white border-b border-gray-100">
+    <section className="relative z-10 bg-brand-950 border-y border-white/10">
       <div className="container-width">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          {trustBadges.map(badge => (
-            <div key={badge.title} className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center flex-shrink-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {trustBadges.map((badge, index) => (
+            <div key={badge.title} className={`flex items-center gap-4 px-5 py-6 ${index > 0 ? 'border-t sm:border-t-0 sm:border-l' : ''} border-white/10`}>
+              <div className="w-11 h-11 bg-accent-400/15 rounded-md flex items-center justify-center flex-shrink-0 [&>svg]:!text-accent-300">
                 {iconMap[badge.icon]}
               </div>
               <div>
-                <div className="font-semibold text-gray-900 text-sm">{badge.title}</div>
-                <div className="text-xs text-gray-500">{badge.description}</div>
+                <div className="font-bold text-white text-sm">{badge.title}</div>
+                <div className="text-xs text-brand-200 leading-5 mt-0.5">{badge.description}</div>
               </div>
             </div>
           ))}

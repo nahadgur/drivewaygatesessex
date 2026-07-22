@@ -54,7 +54,7 @@ export default function BlogIndexPage() {
         </div>
 
         {/* Search + Filter Bar */}
-        <div className="bg-white border-b border-gray-100 sticky top-0 z-30 shadow-sm">
+        <div className="bg-[#F8F5ED] border-b border-brand-200 sticky top-[78px] z-30 shadow-sm">
           <div className="container-width py-4 flex flex-col sm:flex-row gap-3 items-center justify-between">
 
             {/* Category pills */}
@@ -65,8 +65,8 @@ export default function BlogIndexPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide transition-all ${
                     activeCategory === cat
-                      ? 'bg-brand-600 text-white shadow-sm'
-                      : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                      ? 'bg-brand-900 text-white shadow-sm'
+                      : 'bg-white border border-brand-200 text-brand-700 hover:bg-brand-50'
                   }`}
                 >
                   {cat}
@@ -82,7 +82,7 @@ export default function BlogIndexPage() {
                 placeholder="Search guides…"
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                className="w-full pl-8 pr-3 py-2 rounded-full border border-gray-200 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-300 focus:border-transparent"
+                className="w-full min-h-11 pl-9 pr-3 py-2 rounded-md border border-brand-200 bg-white text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent"
               />
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function BlogIndexPage() {
                 {featured && (
                   <Link
                     href={`/blog/${featured.slug}/`}
-                    className="group block mb-12 rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl hover:border-brand-200 transition-all bg-white"
+                    className="group block mb-14 rounded-lg overflow-hidden border border-brand-100 border-l-4 border-l-brand-700 hover:shadow-xl hover:border-l-accent-400 transition-all bg-white"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2">
                       <div className="relative h-60 md:h-auto overflow-hidden">
@@ -149,7 +149,7 @@ export default function BlogIndexPage() {
                       <Link
                         key={article.slug}
                         href={`/blog/${article.slug}/`}
-                        className="group flex flex-col bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-lg hover:border-brand-200 transition-all"
+                        className="group flex flex-col bg-white rounded-lg border border-brand-100 border-b-4 overflow-hidden hover:shadow-lg hover:border-b-accent-400 transition-all"
                       >
                         <div className="relative h-44 overflow-hidden">
                           <img
@@ -188,12 +188,11 @@ export default function BlogIndexPage() {
             )}
 
             {/* CTA Banner */}
-            <div className="mt-16 rounded-2xl overflow-hidden bg-gradient-to-r from-brand-900 to-brand-800 border border-brand-700 shadow-xl relative">
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-brand-400 via-brand-500 to-transparent" />
+            <div className="mt-16 rounded-lg overflow-hidden bg-brand-950 border border-brand-700 border-l-4 border-l-accent-400 shadow-xl relative">
               <div className="px-8 py-10 md:px-12 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
                 <div className="flex-1">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-brand-400 mb-2">Free Service</p>
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-white mb-2">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-accent-300 mb-2">Free Service</p>
+                  <h3 className="text-xl md:text-2xl font-display font-bold !text-white mb-2">
                     Ready to Get Quotes for Your Driveway Gates?
                   </h3>
                   <p className="text-brand-200 text-sm">
@@ -203,7 +202,7 @@ export default function BlogIndexPage() {
                 <div className="flex-shrink-0">
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-bold text-sm transition-all hover:scale-105 active:scale-95 whitespace-nowrap"
+                    className="btn-primary whitespace-nowrap"
                   >
                     Get 3 Free Quotes
                     <ArrowRight className="w-4 h-4" />

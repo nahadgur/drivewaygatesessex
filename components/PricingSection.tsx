@@ -25,20 +25,20 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
     : 'Driveway gate prices across Essex vary depending on the gate type, material, automation requirements, and design complexity. Below are typical costs from installers in our network. All prices are in GBP and include installation.';
 
   return (
-    <section className="mb-16">
-      <div className="flex items-center gap-3 mb-2">
-        <div className="bg-brand-100 p-2 rounded-lg">
-          <PoundSterling className="w-5 h-5 text-brand-600" />
+    <section className="mb-16 rounded-lg border border-brand-200 bg-white p-6 md:p-8 shadow-sm">
+      <div className="flex items-center gap-4 mb-3">
+        <div className="bg-brand-900 p-3 rounded-md">
+          <PoundSterling className="w-5 h-5 text-accent-300" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900">{heading}</h2>
+        <div><p className="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 mb-1">Transparent price guidance</p><h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900">{heading}</h2></div>
       </div>
       <p className="text-gray-600 mb-8 leading-relaxed">{intro}</p>
 
       {/* Pricing Table */}
       <div className="overflow-x-auto mb-8">
-        <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+        <table className="w-full text-sm border border-brand-200 rounded-md overflow-hidden">
           <thead>
-            <tr className="bg-brand-50 text-left">
+            <tr className="bg-brand-900 text-left [&>th]:!text-white">
               <th className="px-5 py-3 font-bold text-gray-900">Gate Type</th>
               <th className="px-5 py-3 font-bold text-gray-900">Price Range</th>
               <th className="px-5 py-3 font-bold text-gray-900 hidden md:table-cell">Install Time</th>
@@ -81,7 +81,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
 
       {/* What's Included + Finance */}
       <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-brand-50 rounded-xl p-6 border border-brand-100">
+        <div className="bg-brand-50 rounded-md p-6 border border-brand-200 border-t-4 border-t-brand-700">
           <h3 className="font-display font-bold text-gray-900 mb-4">What&apos;s Included in the Price</h3>
           <ul className="space-y-2.5">
             {treatmentIncludes.map((item, i) => (
@@ -93,12 +93,12 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
           </ul>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+        <div className="bg-brand-950 rounded-md p-6 border border-brand-800 text-white border-t-4 border-t-accent-400">
           <div className="flex items-center gap-2 mb-4">
             <CreditCard className="w-5 h-5 text-brand-600" />
-            <h3 className="font-display font-bold text-gray-900">0% Finance Available</h3>
+            <h3 className="font-display font-bold !text-white">0% Finance Available</h3>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          <p className="text-sm text-brand-100 leading-relaxed mb-3">
             {financeInfo.description}
           </p>
           <div className="bg-white rounded-lg p-4 border border-gray-100">

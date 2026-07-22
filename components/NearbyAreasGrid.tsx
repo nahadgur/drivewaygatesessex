@@ -29,10 +29,10 @@ export function NearbyAreasGrid({ cityName, serviceSlug, serviceName, initialVis
     : `Our driveway gate installers in ${cityName} serve homeowners from across the surrounding Essex area. If you live in any of the towns, villages, or nearby areas listed below, you are within reach of expert gate installation. Get matched with a local installer today.`;
 
   return (
-    <section className="mb-16">
+    <section className="mb-16 rounded-lg bg-brand-50 border border-brand-200 p-6 md:p-8">
       <div className="flex items-center gap-3 mb-2">
-        <div className="bg-brand-100 p-2 rounded-lg">
-          <MapPin className="w-5 h-5 text-brand-600" />
+        <div className="bg-brand-900 p-2.5 rounded-md">
+          <MapPin className="w-5 h-5 text-accent-300" />
         </div>
         <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900">{heading}</h2>
       </div>
@@ -42,7 +42,7 @@ export function NearbyAreasGrid({ cityName, serviceSlug, serviceName, initialVis
         {visibleAreas.map(area => (
           <div
             key={area}
-            className="flex items-center gap-2 px-3 py-2.5 bg-gray-50 border border-gray-100 rounded-lg text-sm text-gray-700 hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors"
+            className="flex items-center gap-2 px-3 py-3 bg-white border border-brand-100 rounded-md text-sm text-gray-700 hover:bg-brand-900 hover:border-brand-900 hover:text-white transition-colors"
           >
             <MapPin className="w-3 h-3 text-brand-400 flex-shrink-0" />
             <span className="font-medium truncate">

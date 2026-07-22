@@ -5,20 +5,21 @@ import { cn } from '@/lib/utils';
 export function Testimonials({ limit = 3, className }: { limit?: number; className?: string }) {
   const items = testimonials.slice(0, limit);
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", className)}>
-      {items.map(t => (
-        <div key={t.id} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-          <div className="flex text-yellow-400 mb-3">
+    <div className={cn("grid grid-cols-1 lg:grid-cols-3 gap-px overflow-hidden rounded-lg border border-brand-200 bg-brand-200", className)}>
+      {items.map((t, index) => (
+        <figure key={t.id} className="relative bg-white p-7 md:p-8">
+          <div className="absolute right-6 top-4 text-7xl font-black leading-none text-brand-100" aria-hidden="true">“</div>
+          <div className="relative flex text-accent-500 mb-5" aria-label={`${t.rating} out of 5 stars`}>
             {Array.from({ length: t.rating }).map((_, i) => (
               <Star key={i} className="w-4 h-4 fill-current" />
             ))}
           </div>
-          <p className="text-gray-600 text-sm leading-relaxed mb-4">&ldquo;{t.text}&rdquo;</p>
-          <div className="border-t border-gray-50 pt-3">
-            <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
-            <div className="text-xs text-gray-500">{t.location} &middot; {t.service}</div>
-          </div>
-        </div>
+          <blockquote className="relative text-brand-950 leading-7 mb-7">&ldquo;{t.text}&rdquo;</blockquote>
+          <figcaption className="border-t border-brand-100 pt-4">
+            <div className="font-bold text-brand-950 text-sm">{t.name}</div>
+            <div className="text-xs text-brand-700 mt-1">{t.location} &middot; {t.service}</div>
+          </figcaption>
+        </figure>
       ))}
     </div>
   );

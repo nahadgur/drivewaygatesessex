@@ -79,10 +79,11 @@ export default function HomePage() {
         <TrustBadges />
 
         {/* Intro */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-[#F8F5ED]">
           <div className="container-width">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-center">
               <div>
+                <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Your local matching service</p>
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-6">
                   The Smarter Way to Find a Gate Installer in Essex
                 </h2>
@@ -101,13 +102,13 @@ export default function HomePage() {
                   Get Your Free Quotes
                 </button>
               </div>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 p-3 bg-white border border-brand-100 shadow-xl rounded-lg">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-wrought-iron-open-manor-tree-lined.png" alt="Ornate wrought iron driveway gates open on an Essex estate" className="rounded-2xl object-cover w-full h-48 col-span-2" loading="lazy" />
+                <img src="/images/gates/gate-wrought-iron-open-manor-tree-lined.png" alt="Ornate wrought iron driveway gates open on an Essex estate" className="rounded-md object-cover w-full h-64 col-span-2" loading="lazy" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-aluminium-sliding-vertical-bar-stone-pillars.png" alt="Modern aluminium sliding gate between stone pillars" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
+                <img src="/images/gates/gate-aluminium-sliding-vertical-bar-stone-pillars.png" alt="Modern aluminium sliding gate between stone pillars" className="rounded-md object-cover w-full h-40" loading="lazy" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/gates/gate-wooden-oak-swing-cottage-flowers.png" alt="Hardwood iroko driveway gate on an Essex country property" className="rounded-2xl object-cover w-full h-36" loading="lazy" />
+                <img src="/images/gates/gate-wooden-oak-swing-cottage-flowers.png" alt="Hardwood iroko driveway gate on an Essex country property" className="rounded-md object-cover w-full h-40" loading="lazy" />
               </div>
             </div>
           </div>
@@ -116,11 +117,12 @@ export default function HomePage() {
         {/* Why Us */}
         <section className="section-padding bg-gray-50">
           <div className="container-width">
-            <div className="text-center mb-12">
+            <div className="max-w-2xl mb-12">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Why trust the network</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Why Essex Homeowners Use Us</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">We do the vetting so you do not have to. Every installer in our network is screened before they receive a single referral.</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-brand-200 border border-brand-200 rounded-lg overflow-hidden">
               {[
                 {
                   icon: <Award className="w-6 h-6" />,
@@ -143,8 +145,8 @@ export default function HomePage() {
                   desc: 'Compare independent quotes side by side. You choose who to go with, or nobody if the timing is not right. Zero pressure at every stage.',
                 },
               ].map((item, i) => (
-                <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                  <div className="bg-brand-100 p-3 rounded-xl text-brand-600 w-fit mb-4">{item.icon}</div>
+                <div key={i} className="bg-white p-7 min-h-full">
+                  <div className="bg-brand-900 p-3 rounded-md text-accent-300 w-fit mb-5">{item.icon}</div>
                   <h3 className="font-display font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
                 </div>
@@ -156,18 +158,22 @@ export default function HomePage() {
         {/* Gate Types */}
         <section className="section-padding bg-white">
           <div className="container-width">
-            <div className="text-center mb-12">
+            <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-5 mb-12">
+              <div className="max-w-2xl">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Choose the right entrance</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Gate Types We Cover Across Essex</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">Electric sliding, swing, hardwood, wrought iron, full automation retrofits, and repair. Specialist installers for every gate type and every Essex property.</p>
+              <p className="text-gray-600">Electric sliding, swing, hardwood, wrought iron, full automation retrofits, and repair. Specialist installers for every gate type and every Essex property.</p>
+              </div>
+              <Link href="/services/" className="btn-secondary">View all gate services <ArrowRight className="w-4 h-4" /></Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.map(service => (
-                <Link key={service.id} href={`/services/${service.slug}/`} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-                  <div className="h-44 overflow-hidden">
+                <Link key={service.id} href={`/services/${service.slug}/`} className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-100 border-b-4 hover:border-b-accent-400">
+                  <div className="h-52 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                   </div>
-                  <div className="p-5">
+                  <div className="p-6">
                     <h3 className="text-lg font-display font-bold text-gray-900 group-hover:text-brand-600 mb-2">{service.title}</h3>
                     <p className="text-sm text-gray-500 mb-4 line-clamp-2">{service.description}</p>
                     <span className="text-brand-600 font-medium text-sm flex items-center">
@@ -183,7 +189,8 @@ export default function HomePage() {
         {/* Areas */}
         <section className="section-padding bg-gray-50">
           <div className="container-width">
-            <div className="text-center mb-10">
+            <div className="max-w-2xl mb-10">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Essex-wide coverage</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Gate Installers Across the Whole County</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">From the M25 corridor in the west to the Essex coast in the east, our network covers every part of the county. Browse by area below.</p>
             </div>
@@ -192,7 +199,7 @@ export default function HomePage() {
                 <Link
                   key={area}
                   href={`/location/${toSlug(area)}/`}
-                  className="group flex items-center gap-2 p-3 bg-white rounded-xl border border-gray-100 hover:border-brand-300 hover:bg-brand-50 transition-all shadow-sm"
+                  className="group flex items-center gap-3 p-4 bg-white rounded-md border border-brand-100 hover:border-brand-500 hover:bg-brand-50 transition-colors"
                 >
                   <MapPin className="w-4 h-4 text-brand-500 flex-shrink-0" />
                   <span className="text-sm font-medium text-gray-700 group-hover:text-brand-700">Gates in {area}</span>
@@ -210,13 +217,14 @@ export default function HomePage() {
         {/* Pricing */}
         <section className="section-padding bg-white">
           <div className="container-width">
-            <div className="text-center mb-12">
+            <div className="max-w-2xl mb-12">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Realistic installed prices</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">Essex Driveway Gate Installation Costs</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">Realistic price ranges based on completed Essex installations. Every project is different, and a site survey gives you the precise figure.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {pricingTiers.map(tier => (
-                <div key={tier.slug} className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                <div key={tier.slug} className="bg-white rounded-lg p-7 border border-brand-100 border-t-4 border-t-brand-700 shadow-sm">
                   <h3 className="font-display font-bold text-gray-900 mb-2">{tier.treatment}</h3>
                   <p className="text-2xl font-bold text-brand-600 mb-1">
                     £{tier.priceFrom.toLocaleString()} <span className="text-base text-gray-400 font-normal">to</span> £{tier.priceTo.toLocaleString()}
@@ -236,16 +244,25 @@ export default function HomePage() {
           </div>
         </section>
 
-        <Testimonials />
+        <section className="section-padding bg-[#F8F5ED]">
+          <div className="container-width">
+            <div className="max-w-2xl mb-10">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Recommended by homeowners</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold">Recent Essex customer experiences</h2>
+            </div>
+            <Testimonials />
+          </div>
+        </section>
 
         {/* How It Works */}
         <section className="section-padding bg-gray-50">
           <div className="container-width">
-            <div className="text-center mb-12">
+            <div className="max-w-2xl mb-12">
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-brand-600 mb-3">Simple from the start</p>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">How It Works</h2>
               <p className="text-gray-600 max-w-xl mx-auto">Three steps from enquiry to a free site survey with a vetted Essex gate installer. The whole process takes less than two minutes to start.</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-200 rounded-lg overflow-hidden border border-brand-200">
               {[
                 {
                   step: '1',
@@ -263,8 +280,8 @@ export default function HomePage() {
                   desc: 'Each installer visits your property, assesses the site, and provides a detailed written quote. You compare them on your own terms with no pressure and no obligation.',
                 },
               ].map(item => (
-                <div key={item.step} className="text-center">
-                  <div className="w-14 h-14 bg-brand-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-5">{item.step}</div>
+                <div key={item.step} className="bg-white p-8 text-left">
+                  <div className="text-5xl font-black text-brand-200 mb-5">0{item.step}</div>
                   <h3 className="text-lg font-display font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
@@ -322,17 +339,20 @@ export default function HomePage() {
 
         {/* FAQ */}
         <section className="section-padding bg-gray-50">
-          <div className="container-width max-w-3xl">
+          <div className="container-width">
             <FAQ faqs={homepageFaqs} title="Driveway Gates in Essex: Frequently Asked Questions" />
           </div>
         </section>
 
         {/* Bottom CTA */}
-        <section className="section-padding bg-brand-900 text-white">
-          <div className="container-width text-center">
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">Ready to Get Quotes for Your Essex Property?</h2>
-            <p className="text-brand-200 max-w-2xl mx-auto mb-8">Submit your enquiry in under two minutes. We will match you with up to three vetted Essex gate installers for free site surveys, detailed written quotes, and no obligation.</p>
-            <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">
+        <section className="section-padding bg-brand-950 text-white border-t-4 border-accent-400">
+          <div className="container-width grid lg:grid-cols-[1fr_auto] gap-8 items-center">
+            <div>
+              <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-accent-300 mb-3">No cost. No obligation.</p>
+              <h2 className="text-3xl md:text-4xl font-display font-bold !text-white mb-4">Ready to Get Quotes for Your Essex Property?</h2>
+              <p className="text-brand-200 max-w-2xl">Submit your enquiry in under two minutes. We will match you with up to three vetted Essex gate installers for free site surveys, detailed written quotes, and no obligation.</p>
+            </div>
+            <button onClick={() => setIsModalOpen(true)} className="btn-primary text-lg !py-4 !px-10">
               Get Free Quotes Now
             </button>
           </div>

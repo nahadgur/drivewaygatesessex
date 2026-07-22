@@ -60,7 +60,7 @@ export function HeroLeadForm({ city }: HeroLeadFormProps) {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 text-base focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition";
+    "w-full min-h-12 px-4 py-3 rounded-md border border-brand-200 bg-brand-50 text-brand-950 placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-accent-400 focus:border-transparent transition";
 
   if (isSuccess) {
     return (
@@ -77,9 +77,9 @@ export function HeroLeadForm({ city }: HeroLeadFormProps) {
   }
 
   return (
-    <div className="bg-white text-gray-900 rounded-2xl p-6 md:p-8 shadow-2xl border border-gray-100">
+    <div className="bg-white text-gray-900 rounded-lg p-6 md:p-8 shadow-2xl border-t-4 border-accent-400">
       <div className="mb-6">
-        <span className="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+        <span className="inline-block text-brand-700 text-xs font-extrabold uppercase tracking-[0.16em] mb-3">
           Free Matching Service
         </span>
         <h3 className="text-2xl font-display font-bold leading-tight">
@@ -105,7 +105,7 @@ export function HeroLeadForm({ city }: HeroLeadFormProps) {
         <button
           disabled={isSubmitting}
           type="submit"
-          className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 text-white font-semibold py-3 px-6 rounded-xl transition-colors text-sm mt-1"
+          className="btn-primary w-full disabled:opacity-60 text-sm mt-1"
         >
           {isSubmitting ? 'Sending...' : 'Get 3 Free Quotes'}
         </button>

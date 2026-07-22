@@ -22,16 +22,16 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
   };
 
   return (
-    <nav aria-label="Breadcrumb" className="mb-6">
+    <nav aria-label="Breadcrumb" className="mb-7 border-b border-brand-100 pb-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <ol className="flex items-center flex-wrap gap-1 text-sm text-gray-500">
+      <ol className="flex items-center flex-wrap gap-1.5 text-xs font-semibold uppercase tracking-wide text-brand-700">
         {allItems.map((item, i) => (
           <li key={i} className="flex items-center gap-1">
             {i > 0 && <ChevronRight className="w-3.5 h-3.5 text-gray-300" />}
             {item.href ? (
-              <Link href={item.href} className="hover:text-brand-600 transition-colors">{item.label}</Link>
+              <Link href={item.href} className="hover:text-brand-950 transition-colors">{item.label}</Link>
             ) : (
-              <span className="text-gray-900 font-medium">{item.label}</span>
+              <span className="text-brand-950 font-bold">{item.label}</span>
             )}
           </li>
         ))}
