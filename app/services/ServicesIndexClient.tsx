@@ -17,7 +17,7 @@ export default function ServicesIndexPage() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main className="trusted-local flex-grow">
         <Hero
           title="Driveway Gate Types for Essex Homes"
           subtitle="From electric sliding gates to traditional hardwood swing gates, find the right option for your property and get matched with a specialist Essex installer."

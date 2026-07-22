@@ -31,7 +31,7 @@ export default function BlogIndexPage() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main className="trusted-local flex-grow">
 
         {/* Hero */}
         <div className="relative h-[340px] md:h-[420px] overflow-hidden">

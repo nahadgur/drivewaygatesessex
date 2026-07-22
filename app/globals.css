@@ -2,25 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 :root {
-  --brand-50: #F7F5F0;
-  --brand-100: #EDE8DC;
-  --brand-200: #DDD4C0;
-  --brand-300: #C9BA9C;
-  --brand-400: #B39D78;
-  --brand-500: #9A7D56;
-  --brand-600: #7D6343;
-  --brand-700: #614B33;
-  --brand-800: #463525;
-  --brand-900: #2E231A;
-  --brand-950: #1A150D;
+  --brand-50: #F3F7F4;
+  --brand-100: #E1ECE4;
+  --brand-200: #C2D8C7;
+  --brand-300: #95B99E;
+  --brand-400: #649377;
+  --brand-500: #3F7358;
+  --brand-600: #2F5D46;
+  --brand-700: #254A39;
+  --brand-800: #1D3B2F;
+  --brand-900: #142A22;
+  --brand-950: #0B1914;
+  --accent: #E4B64E;
+  --cream: #F8F5ED;
 }
 
 @layer base {
   body {
-    @apply font-body text-gray-800 antialiased;
+    @apply font-body text-gray-800 antialiased bg-[#F8F5ED];
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -38,12 +40,51 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-sm hover:shadow-md;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 bg-accent-400 hover:bg-accent-300 active:bg-accent-500 text-brand-950 font-bold py-3 px-6 rounded-md transition-colors shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-gray-800 font-bold py-3 px-6 rounded-xl border-2 border-gray-200 hover:border-brand-300 transition-all;
+    @apply inline-flex min-h-12 items-center justify-center gap-2 bg-white hover:bg-brand-50 text-brand-950 font-bold py-3 px-6 rounded-md border border-brand-200 hover:border-brand-500 transition-colors;
   }
+}
+
+.trusted-local {
+  background: var(--cream);
+}
+
+.trusted-local h1:not(.text-white),
+.trusted-local h2:not(.text-white),
+.trusted-local h3:not(.text-white),
+.trusted-local h4:not(.text-white) {
+  color: var(--brand-950);
+  letter-spacing: -0.025em;
+}
+
+.trusted-local .bg-gray-50 {
+  background-color: #F1EEE4;
+}
+
+.trusted-local .bg-gray-900 {
+  background-color: var(--brand-950);
+}
+
+.trusted-local .rounded-2xl {
+  border-radius: 0.75rem;
+}
+
+.trusted-local .rounded-xl {
+  border-radius: 0.5rem;
+}
+
+.trusted-local .shadow-xl,
+.trusted-local .shadow-2xl {
+  box-shadow: 0 22px 55px -32px rgba(11, 25, 20, 0.45);
+}
+
+.trusted-local a:focus-visible,
+.trusted-local button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
 }
 
 @layer utilities {

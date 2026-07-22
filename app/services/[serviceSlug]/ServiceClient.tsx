@@ -214,7 +214,7 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main className="trusted-local flex-grow">
 
         <section className="bg-gray-900 text-white relative overflow-hidden">
           <div className="absolute inset-0">

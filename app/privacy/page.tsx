@@ -31,7 +31,7 @@ export default function PrivacyPage() {
     <>
       <Header />
 
-      <main className="flex-grow">
+      <main className="trusted-local flex-grow">
         <section className="bg-gray-50 border-b border-gray-200">
           <div className="container-width py-12 md:py-16">
             <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />

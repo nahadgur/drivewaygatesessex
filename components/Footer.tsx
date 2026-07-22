@@ -6,13 +6,14 @@ import { siteConfig } from '@/data/site';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <footer className="bg-brand-950 text-brand-100 pt-16 pb-28 md:pb-8 border-t-4 border-accent-400">
       <div className="container-width">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-brand-500 rounded-md flex items-center justify-center text-white font-bold">DG</div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-60px.png" alt="" className="w-11 h-11 object-contain bg-white rounded-md" />
               <span className="font-display font-bold text-lg text-white">Driveway Gates Essex</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-4">

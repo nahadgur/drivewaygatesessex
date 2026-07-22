@@ -67,7 +67,7 @@ export default function HomePage() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main className="trusted-local flex-grow">
 
         <Hero
           title="Driveway Gates Essex: Vetted Installers, Free Quotes"

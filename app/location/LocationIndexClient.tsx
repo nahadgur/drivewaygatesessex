@@ -30,7 +30,7 @@ export default function LocationIndexPage() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main className="trusted-local flex-grow">
         <Hero
           title="Find Gate Installers in Your Area"
           subtitle="Access Essex's most trusted network of driveway gate specialists. Vetted for experience, verified for quality."

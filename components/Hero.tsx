@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle2, MapPin } from 'lucide-react';
 
 interface HeroProps {
   title: string;
@@ -12,42 +12,43 @@ interface HeroProps {
 
 export function Hero({ title, subtitle, image, showCta = true, showTrust = true, onOpenModal }: HeroProps) {
   return (
-    <section className="relative bg-gray-900 text-white overflow-hidden">
+    <section className="relative bg-brand-950 text-white overflow-hidden min-h-[650px] flex items-center">
       <div className="absolute inset-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={image} alt="" className="w-full h-full object-cover opacity-80" loading="eager" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-gray-900/20" />
+        <img src={image} alt="" className="w-full h-full object-cover opacity-75" loading="eager" />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-950/95 via-brand-950/75 to-brand-950/25" />
       </div>
 
-      <div className="relative container-width py-24 md:py-32">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-white">
+      <div className="relative container-width py-20 md:py-28 w-full">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-2 text-accent-300 text-xs font-extrabold uppercase tracking-[0.18em] mb-5"><MapPin className="w-4 h-4" /> Local knowledge. Properly vetted.</div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight mb-6 text-white leading-[1.02] text-balance">
             {title}
           </h1>
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed">{subtitle}</p>
+          <p className="text-lg md:text-xl text-white/85 mb-8 leading-relaxed max-w-2xl">{subtitle}</p>
 
           {showCta && (
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               {onOpenModal ? (
-                <button onClick={onOpenModal} className="btn-primary text-lg !px-8 !py-4 text-center">
-                  Get Free Quotes
+                <button onClick={onOpenModal} className="btn-primary text-base !px-8 !py-4 text-center">
+                  Get Three Free Quotes
                 </button>
               ) : (
-                <Link href="/services/" className="btn-primary text-lg !px-8 !py-4 text-center">
-                  Get Free Quotes
+                <Link href="/services/" className="btn-primary text-base !px-8 !py-4 text-center">
+                  Get Three Free Quotes
                 </Link>
               )}
-              <Link href="/services/" className="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 text-lg !px-8 !py-4 text-center">
-                View Gate Types
+              <Link href="/services/" className="btn-secondary !bg-transparent !border-white/50 !text-white hover:!bg-white/10 text-base !px-8 !py-4 text-center">
+                Explore Gate Types
               </Link>
             </div>
           )}
 
           {showTrust && (
-            <div className="flex flex-wrap gap-6 text-sm font-medium text-gray-300">
-              {['50+ Installs Per Installer', 'Free Site Surveys', '4.9 Star Rated'].map(item => (
+            <div className="flex flex-wrap gap-x-7 gap-y-3 border-t border-white/20 pt-6 text-sm font-semibold text-white/90">
+              {['50+ installs per specialist', 'Free local site surveys', 'Written warranties'].map(item => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-brand-400" />
+                  <CheckCircle2 className="w-5 h-5 text-accent-300" />
                   <span>{item}</span>
                 </div>
               ))}
